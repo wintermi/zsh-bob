@@ -15,7 +15,7 @@ path=("$HOME/.local/share/bob/nvim-bin" $path)
 local COMPLETIONS_DIR="${0:A:h}/completions"
 
 # Only regenerate completions if older than 24 hours, or does not exist
-if [[ ! -f "$COMPLETIONS_DIR/_bob"  ||  ! $(find "$COMPLETIONS_DIR/_bob" -newermt "24 hours ago" -print) ]]; then
+if [[ ! -f "$COMPLETIONS_DIR/_bob"  ||  ! $(find "$COMPLETIONS_DIR/_bob" -newermt "7 days ago" -print) ]]; then
     bob complete zsh >| "$COMPLETIONS_DIR/_bob"
 fi
 
