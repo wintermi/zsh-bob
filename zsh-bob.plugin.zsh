@@ -3,7 +3,6 @@
 
 # Exit if the 'bob' command can not be found
 if ! (( $+commands[bob] )); then
-    echo "WARNING: 'bob' command not found"
     return
 fi
 
